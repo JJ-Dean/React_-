@@ -10,6 +10,11 @@ function App() {
 
   const addItemHandler = (enteredItem) => {
     console.log(enteredItem);
+    setPracItems((prevItems) => {
+      const updateItem = [...prevItems];
+      updateItem.unshift({ name: enteredItem.name, age: enteredItem.age });
+      return updateItem;
+    });
   };
 
   return (
