@@ -13,6 +13,8 @@ const InputForm = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    const enteredItem = { name: inputNameValue, age: inputAgeValue };
+    props.onAddItem(enteredItem);
   };
 
   return (
