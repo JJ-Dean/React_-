@@ -1,3 +1,7 @@
+import React, { useState } from 'react';
+
+import InputForm from './components/PracInput/InputForm';
+
 function App() {
   return (
     <div>
