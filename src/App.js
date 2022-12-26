@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import InputForm from './components/PracInput/InputForm';
+import PracList from './components/PracList/PracList';
 
 function App() {
   const [pracItems, setPracItems] = useState([
@@ -19,8 +20,12 @@ function App() {
 
   return (
     <div>
-      <InputForm onAddItem={addItemHandler}></InputForm>
-      <h2>Let's get started!</h2>
+      <section id="items">
+        <InputForm onAddItem={addItemHandler}></InputForm>
+      </section>
+      <section id="item-list">
+        <PracList items={pracItems} />
+      </section>
     </div>
   );
 }
